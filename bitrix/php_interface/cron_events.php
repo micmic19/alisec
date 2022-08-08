@@ -21,4 +21,5 @@ if(CModule::IncludeModule('sender'))
 	\Bitrix\Sender\MailingManager::checkSend();
 }
 require($_SERVER['DOCUMENT_ROOT']."/bitrix/modules/main/tools/backup.php");
+//test
 ?>
