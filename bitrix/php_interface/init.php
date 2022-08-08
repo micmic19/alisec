@@ -1,7 +1,7 @@
 <?
 //if ($USER->IsAdmin())
 //AddMessage2Log(print_r($arDiscounts,true), "sale");
-// ReCaptcha v2
+// ReCaptcha v2 ()
 @require_once 'include/autoload.php';
 define("RE_SITE_KEY","6LeJEWAUAAAAADyGAL5Yi7Kgtzv6U_MvYrNv50f7");
 define("RE_SEC_KEY","6LeJEWAUAAAAAIb626wmSOaLafOavCTiDSlOztyV");
