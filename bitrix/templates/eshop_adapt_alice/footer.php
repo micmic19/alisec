@@ -13,7 +13,7 @@
 							),
 							false,
 							Array('HIDE_ICONS' => 'Y')
-						);//rur&micmicss?>
+						);//rur&micu?>
 					</div><!--// sidebar -->
 					<?endif?>
 				</div><!--//row-->
