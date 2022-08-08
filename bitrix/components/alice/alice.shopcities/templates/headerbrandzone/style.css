@@ -1,0 +1,45 @@
+
+.alice-header-brandzone .alicelogo{
+	margin:5px;
+}
+
+.alice-header-brandzone .contactsdata {
+	background-color:white;
+	width: 100%;
+}
+.contactsdata .tel{
+	font-size:22px;/*#ALICE*/
+	font-weight:bold;
+	/*line-height:21px;*/
+	color:#000;
+}
+
+.contactsdata .workhours{
+	font-size:12px;
+	/*line-height:28px;*/
+	font-weight:normal;
+	display:block
+}
+
+.alice-header-brandzone .sitelogo{
+	min-height: 100px;
+}
+@media (max-width: 1280px){
+	.alice-header-brandzone .sitelogo{
+		width:650px;
+	} 
+}
+@media (min-width: 1281px){
+	.alice-header-brandzone .sitelogo{
+		width:780px;
+	} 
+}
+
+.alice-header-brandzone .sitelogo img{
+	width:100%;
+}
+
+.alice-header-brandzone .contactsdata > div{
+	margin:10px;
+}
+

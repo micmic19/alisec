@@ -1,0 +1,222 @@
+
+.header_city_selector {
+	position:relative;
+	margin-right: 10px;
+	float:left;
+	visibility:hidden;
+}
+.col-xs-5 .header_city_selector {
+	margin: 5px 0;
+}
+.col-xs-5 .header_city_selector .selected{
+	color: white;
+}
+.col-xs-5 .header_city_selector .selected:after{
+	border-top-color: white;
+}
+
+.header_city_selector .selected  {
+	color: #039be5;
+	border-bottom: 1px dashed;
+	text-decoration: none;
+	padding-right: 14px;
+}
+
+.header_city_selector .selected:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent; 
+    border-bottom: 0;
+    top: 7px;
+    right: 0px;
+    border-top-color: #039be5;  
+}
+
+.header_city_selector .selected b {
+	font-weight: bold;
+	border-bottom: 1px dotted white;
+}
+
+.header_city_selector a.selected {
+    cursor: pointer;
+}
+
+.default_popup {
+	background-color: #FFFFFF;
+	padding: 13px 17px 15px;
+	position: absolute;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	box-shadow: 0px 0px 20px #BBBBBB;
+	-moz-box-shadow: 0px 0px 20px #BBBBBB;
+	-webkit-box-shadow: 0px 0px 20px #BBBBBB;
+	z-index: 7000;
+	display: none;
+}
+.default_popup .close {
+	background-image: url(../../images/close_popup.gif);
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	top: 10px;
+	right: 10px;
+}
+.default_popup .hd {
+	font-size: 29px;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 5px;	
+	color: #4D545B;
+}
+.choose_city_popup {
+	position:fixed;
+	width: 610px;
+	margin-left: -305px;
+	left: 50%;
+	top: 65px;
+	font-size: 13px;
+}
+.choose_city_popup .default_input {
+	width: 592px;
+	font: normal 15px Arial, Helvetica, sans-serif;
+	color: #7F868E;
+	padding-top: 5px;
+	padding-bottom: 6px;
+	margin-bottom: 15px;
+}
+.choose_city_popup .top_cities {
+	float: left;
+	text-align: left;	
+	width: 203px;
+	font-size: 14px;	
+	margin-bottom: 16px;
+}
+
+.choose_city_popup .top_cities ul li:first-child {
+	padding-bottom: 9px;
+	padding-right: 30px;
+}
+
+.choose_city_popup .top_cities ul li:first-child a{
+	display: inline;
+	background:none;
+}
+
+.choose_city_popup .top_cities li {
+	padding-bottom: 9px;
+	padding-right: 30px;
+}	
+.choose_city_popup .top_cities li {
+	padding-bottom: 9px;
+	padding-right: 30px;
+}
+
+.choose_city_popup .top_cities li a {
+	color: #007acf;
+}
+
+.choose_city_popup .top_cities li a:hover {
+	color: #C61E3F;
+}
+
+
+/*alice header brandzone*/
+.alice-header-brandzone{
+	background:white;
+	position:relative;
+	overflow:hidden;
+}
+.alice-header-brandzone .alicelogo{
+	float:left;
+	padding: 10px 0;
+}
+.alice-header-brandzone .alicelogo-background{
+	position:absolute;
+	width:250px;
+	height:550px;
+	background: #8BB897;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #8BB897 0%, #629F75 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8BB897), color-stop(100%,#629F75));
+	background: -webkit-linear-gradient(top, #8BB897 0%,#629F75 100%);
+	background: -o-linear-gradient(top, #8BB897 0%,#629F75 100%);
+	background: -ms-linear-gradient(top, #8BB897 0%,#629F75 100%);
+	background: linear-gradient(to bottom, #8BB897 0%,#629F75 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8BB897', endColorstr='#629F75',GradientType=0 );
+}
+.alice-header-brandzone img{
+	position:relative;
+}
+
+.alice-header-brandzone .contactsdata {
+	float:right;
+	background-color:white;
+	overflow:hidden;
+	width: 210px;
+	padding:10px;
+}
+
+.city-selector-mobile{
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+}
+.city-selector-mobile >a{
+	color:white;
+	display:block;
+	border-radius:16px;
+	border:1px solid black;
+	float:left;
+	padding:0 5px;
+}
+.city-selector-mobile >div{
+	color:white;
+	float:left;
+}
+
+
+.bx-logo .callme{
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+	line-height: 53px;
+	padding:0 5px;
+}
+.bx-logo .callme:after{
+	background: url("images/phone-icon-32.png") no-repeat;
+	float:left;
+	content: '';
+	width:40px;
+	height:40px;
+	margin:5px;
+	display:block;
+	position:fixed;
+	right:0;
+	top:0;
+	background-size: cover;
+}
+
+
+.contactsdata .workhours{
+	font-size:12px;
+	font-weight:normal;
+	display:block
+}
+
+.alice-header-brandzone .sitelogo{
+	min-height: 120px;
+	float:left;
+}
+
+.alice-header-brandzone .sitelogo img{
+	width:100%;
+}
+
+.alice-header-brandzone .contactsdata > div{
+	margin:10px;
+}

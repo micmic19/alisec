@@ -1,0 +1,16 @@
+.bx-captcha{
+	margin: 10px 0;
+}
+.bx-captcha > *{
+	float:left;
+}
+.refresh-captcha{
+	background:url("images/refresh-icon-32.png") no-repeat center;
+	width:40px;
+	height:40px;
+	cursor:pointer;
+}
+
+.refresh-captcha:active{
+	cursor:progress;
+}

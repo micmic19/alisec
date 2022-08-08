@@ -1,0 +1,15 @@
+.contactsdata a{
+	font-size:20px;
+	position:relative;
+	top:10x;
+}
+.contactsdata a:before{
+	background: url("images/phone-icon-32.png") no-repeat;
+	content: '';
+	width:32px;
+	height:32px;
+	display:block;
+	position:absolute;
+	top:-4px;
+	left:-32px;
+}
