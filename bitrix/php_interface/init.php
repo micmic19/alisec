@@ -568,7 +568,7 @@ class CRestrictIP {
             return $ip;
         }
         $ip = get_ip_ws();
-		$allowed_ip = array('172.16.1.50','172.16.1.54','172.16.7.43','172.16.0.93', '172.16.0.49');
+		$allowed_ip = array('172.16.1.50','172.16.1.54','172.16.7.43','172.16.0.93', '172.16.0.49', '172.30.240.1');
         if ( strtolower($arFields["LOGIN"]) == "admin" && (array_search($ip, $allowed_ip) === false)) {
             global $APPLICATION;
             $APPLICATION->throwException("login admin restricted by ip address");
