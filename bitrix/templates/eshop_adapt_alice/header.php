@@ -3,7 +3,7 @@ IncludeTemplateLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/templates/".SITE_TEMP
 $wizTemplateId = COption::GetOptionString("main", "wizard_template_id", "eshop_adapt_horizontal", SITE_ID);
 CJSCore::Init(array("fx"));
 //CJSCore::Init('jquery');//#ALICE
-CJSCore::Init(array('jquery2'));//#ALICE mic 18/10/2021
+CJSCore::Init(array('jquery2'));//#ALICE mic 18/10/2021 yyy
 $curPage = $APPLICATION->GetCurPage(true);
 ?>
 <!DOCTYPE html>
