@@ -1,0 +1,1 @@
+<img src="/include/logo3.svg?ver='1.4'" srcset="/include/logo3.svg?ver='1.4'">
