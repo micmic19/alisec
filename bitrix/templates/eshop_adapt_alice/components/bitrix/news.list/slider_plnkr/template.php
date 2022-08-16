@@ -1,5 +1,10 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
+<?
+	$this->addExternalJs("//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js");
+	$this->addExternalCss("//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css");
+
+?>
 <div class="container">
   <div id="myCarousel" class="carousel slide">
 
