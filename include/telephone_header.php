@@ -4,3 +4,6 @@
 	<br>
 	<a href="tel:+78001018140">+7 (800) 101-81-40</a>
 </div>
+<a class="bx-logo-block hidden-lg hidden-md hidden-sm text-center" href="/">
+	<img src="/include/logo3.svg" srcset="/include/logo3.svg">
+</a>
