@@ -92,7 +92,7 @@ img {
 		right: 0;
 		top: 0;
 		z-index: 1400;
-		padding: 0 60px;
+		padding-left: 40px;
 	}
 	.bx-logo .bx-logo-block {
 		text-align: center;
@@ -717,16 +717,14 @@ a.bxd-block:hover {}
 /*Enter in opt area*/
 .opt-enter {
 	border: 2px solid;
-	border-color:yellow;
-	padding: 0 10px;
+	border-color:black;
+	padding: 5px 10px;
 	text-align: center;	
-	background-color: rgba(0, 128, 0, 0.5);
+	background-color: white;
 	border-radius: 5px;	
-	/*float:left;*/	
 }
 .opt-enter a{
 	position: relative;
-	font: bold 16pt sans-serif;
 	text-decoration:none;
-	color:white;
+	color:black;
 }

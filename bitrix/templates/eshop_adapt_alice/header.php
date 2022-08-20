@@ -66,12 +66,10 @@ $curPage = $APPLICATION->GetCurPage(true);
 			</div>
 			
 			<div class="row">
-				<div class="col-md-2 col-sm-2">
-					<a class="bx-logo-block hidden-xs" href="<?=SITE_DIR?>">
-						<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/company_logo.php"), false);?>
-					</a>
+				<div class="bx-logo col-md-2 col-lg-1 col-sm-2">
+					<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/company_logo.php"), false);?>
 				</div>
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-6 col-lg-7 col-sm-6">
 
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:search.title", 
@@ -114,8 +112,8 @@ $curPage = $APPLICATION->GetCurPage(true);
 						false
 					);?>
 				</div>
-				<div class="col-md-2 hidden-sm hidden-xs">
-					<a href="http://www.alice.ru/opt/goods/classes.aspx" target="_blank"><img src="/images/opt-enter.png"></a>
+				<div class="opt-enter col-lg-2 col-md-2 hidden-sm hidden-xs">
+					<a href="http://www.alice.ru/opt/goods/classes.aspx" target="_blank">ВХОД ДЛЯ ОПТОВЫХ ПОКУПАТЕЛЕЙ</a>
 				</div>
 				<div class="col-md-2 col-sm-4 hidden-xs pull-right">
 					<?$APPLICATION->IncludeComponent(
