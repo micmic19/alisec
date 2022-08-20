@@ -64,12 +64,11 @@ $curPage = $APPLICATION->GetCurPage(true);
 				</div>
 				<div class="col-md-2 col-sm-4 hidden-xs"><?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/telephone_header.php"), false);?></div>				
 			</div>
-			
 			<div class="row">
 				<div class="bx-logo col-md-2 col-lg-1 col-sm-2">
 					<?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/company_logo.php"), false);?>
 				</div>
-				<div class="col-md-6 col-lg-7 col-sm-6">
+				<div class="col-md-5 col-lg-7 col-sm-6">
 
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:search.title", 
@@ -112,33 +111,31 @@ $curPage = $APPLICATION->GetCurPage(true);
 						false
 					);?>
 				</div>
-				<div class="opt-enter col-lg-2 col-md-2 hidden-sm hidden-xs">
+				<div class="opt-enter col-lg-2 col-md-3 hidden-sm hidden-xs">
 					<a href="http://www.alice.ru/opt/goods/classes.aspx" target="_blank">ВХОД ДЛЯ ОПТОВЫХ ПОКУПАТЕЛЕЙ</a>
 				</div>
 				<div class="col-md-2 col-sm-4 hidden-xs pull-right">
 					<?$APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket.line", 
-	"modern", 
-	array(
-		"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
-		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
-		"SHOW_PERSONAL_LINK" => "N",
-		"SHOW_NUM_PRODUCTS" => "Y",
-		"SHOW_TOTAL_PRICE" => "Y",
-		"SHOW_PRODUCTS" => "N",
-		"POSITION_FIXED" => "N",
-		"SHOW_AUTHOR" => "Y",
-		"PATH_TO_REGISTER" => SITE_DIR."login/",
-		"PATH_TO_PROFILE" => SITE_DIR."personal/",
-		"COMPONENT_TEMPLATE" => "modern",
-		"SHOW_EMPTY_VALUES" => "Y"
-	),
-	false
-);?>
+						"bitrix:sale.basket.basket.line", 
+						"modern", 
+						array(
+							"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+							"PATH_TO_PERSONAL" => SITE_DIR."personal/",
+							"SHOW_PERSONAL_LINK" => "N",
+							"SHOW_NUM_PRODUCTS" => "Y",
+							"SHOW_TOTAL_PRICE" => "Y",
+							"SHOW_PRODUCTS" => "N",
+							"POSITION_FIXED" => "N",
+							"SHOW_AUTHOR" => "Y",
+							"PATH_TO_REGISTER" => SITE_DIR."login/",
+							"PATH_TO_PROFILE" => SITE_DIR."personal/",
+							"COMPONENT_TEMPLATE" => "modern",
+							"SHOW_EMPTY_VALUES" => "Y"
+						),
+						false
+					);?>
 				</div>
-				
 			</div>
-
 			<div class="row">
 				<div class="hidden-xs <?=(($curPage == SITE_DIR."index.php" || $curPage == SITE_DIR."catalog/index.php") ? "col-md-12": "col-sm-4")?>">
 					<?if ($wizTemplateId == "eshop_adapt_horizontal"):?>
@@ -167,9 +164,6 @@ $curPage = $APPLICATION->GetCurPage(true);
 					<?endif?>
 				</div>
 			</div>			
-
-			</div>
-			
 			<?if ($curPage != SITE_DIR."index.php"):?>
 				<div class="row">
 					<div class="col-lg-12">
@@ -185,6 +179,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 				</div>
 				<h3 class="bx-title dbg_title"><?=$APPLICATION->ShowTitle(false);?></h3>
 			<?endif?>
+			</div>
 		</div>
 	</header>
 	<div class="workarea">

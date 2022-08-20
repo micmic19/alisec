@@ -721,7 +721,8 @@ a.bxd-block:hover {}
 	padding: 5px 10px;
 	text-align: center;	
 	background-color: white;
-	border-radius: 5px;	
+	border-radius: 5px;
+	max-width:200px;	
 }
 .opt-enter a{
 	position: relative;
