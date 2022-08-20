@@ -21,7 +21,7 @@ $boolFirst = true;
 $strContWidth = 100*$itemsCount;
 $strItemWidth = 100/$itemsCount;
 ?>
-<div class="bx_slider_section" id="<? echo $strContID; ?>">
+<div class="bx_slider_section hidden-xs" id="<? echo $strContID; ?>">
 	<div class="bx_slider_container" style="width:<? echo $strContWidth; ?>%;" id="bx_catalog_slider_cont_<?=$randID?>">
 <?foreach($arResult["ITEMS"] as $key => $arItem):
 	$strRowID = 'cat-top-'.$key.'_'.$randID;
