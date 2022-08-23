@@ -1,18 +1,22 @@
 .bx_slider_section{
 	position:relative;
 	overflow:hidden;
-	margin-top:40px;
-	padding-top:28%;
+	padding-top:17%;
 }
-@media (max-width:640px){.bx-touch .bx_slider_section{margin-top:20px;padding-top:70%}}
-@media (max-width:480px){
-	.bx-touch .bx_slider_section{
-		margin-top: 20px;
-		padding-top: 70%;
+
+@media (min-width:768px){
+	.bx_slider_section{
+		margin:5px 5% 
 	}
 
 }
 
+@media (min-width:992px){
+	.bx_slider_section{
+		margin:10px 15% 
+	}
+
+}
 
 .bx_slider_section .bx_slider_container{
 	position: absolute;
@@ -44,7 +48,7 @@
 }
 .bx_slider_section .bx_slider_photo_container{
 	position:absolute;
-	top:0;
+	top:4px;
 	bottom:0;
 	width:55%;
 }
