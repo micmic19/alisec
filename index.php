@@ -78,7 +78,7 @@ $arrFilter = array(array(
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "Y"
+	"ACTIVE_COMPONENT" => "N"
 	)
 );?>
 
