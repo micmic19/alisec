@@ -1,6 +1,9 @@
 *
 !.gitignore
 !/index.php
+!about/
+!about/contacts/
+!about/contacts/*
 !include/
 !include/*
 !include/*/*
