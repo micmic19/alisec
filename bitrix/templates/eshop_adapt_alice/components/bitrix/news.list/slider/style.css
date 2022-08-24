@@ -13,7 +13,7 @@
 
 @media (min-width:992px){
 	.bx_slider_section{
-		margin:10px 15% 
+		margin: 10px 15% 10px 0;
 	}
 
 }
@@ -50,7 +50,7 @@
 	position:absolute;
 	top:4px;
 	bottom:0;
-	width:55%;
+	width:50%;
 }
 @media (max-width:640px){
 	.bx-touch .bx_slider_section .bx_slider_photo_container{
