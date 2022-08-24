@@ -1,4 +1,6 @@
-.bx-basket {}
+.bx-basket {
+	margin-left: -46px;
+}
 .bx-basket-block {
 	font-size: 12px;
 	padding-bottom: 5px;
