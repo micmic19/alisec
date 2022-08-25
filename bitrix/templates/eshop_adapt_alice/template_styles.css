@@ -717,7 +717,7 @@ a.bxd-block:hover {}
 /*Enter in opt area*/
 .opt-enter {
 	border: 2px solid;
-	border-color:black;
+	border-color:rgba(0, 77, 46, 0.59);
 	/*padding: 5px 10px;*/
 	text-align: center;	
 	background-color: white;
@@ -730,5 +730,6 @@ a.bxd-block:hover {}
 .opt-enter a{
 	/*position: relative;
 	text-decoration:none;*/
-	color:black;
+	/*color:black;*/
+	color:#337ab7;
 }
