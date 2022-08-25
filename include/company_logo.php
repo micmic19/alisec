@@ -5,5 +5,5 @@
 	<img style="max-width: 14%;padding: 7px;" src="/images/vk-com-logo-circle.svg" srcset="/images/vk-com-logo-circle.svg">
 </a>
 <a class="hidden-sm hidden-lg hidden-md" href="tel:+78123311461">
-	<img style="max-width: 10%;" src="/images/phone_icon.svg?ver='1.4'" srcset="/images/phone_icon.svg?ver='1.4'">
+	<img style="max-width: 14%;padding: 7px;" src="/images/phone_icon.svg?ver='1.4'" srcset="/images/phone_icon.svg?ver='1.4'">
 </a>
