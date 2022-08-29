@@ -112,7 +112,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 					);?>
 				</div>
 				<div class="opt-enter col-lg-2 col-md-3 hidden-sm hidden-xs">
-					<a href="http://www.alice.ru/opt/goods/classes.aspx" target="_blank">ВХОД ДЛЯ ОПТОВЫХ ПОКУПАТЕЛЕЙ</a>
+					<a href="http://www.alice.ru/opt/goods/classes.aspx" target="_blank">ДЛЯ ОПТОВЫХ ПОКУПАТЕЛЕЙ</a>
 				</div>
 				<div class="col-md-2 col-sm-4 hidden-xs pull-right">
 					<?$APPLICATION->IncludeComponent(

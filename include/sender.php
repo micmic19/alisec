@@ -6,7 +6,7 @@
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "Y"
+	"ACTIVE_COMPONENT" => "N"
 	)
 );?>
 </div>

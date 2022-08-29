@@ -1,6 +1,6 @@
 <?if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();?>
 
-<div class="bx-hdr-profile">
+<div class="bx-hdr-profile al-ph">
 	<?if ($arParams['SHOW_AUTHOR'] == 'Y'):?>
 		<div class="bx-basket-block">
 			<img src="<?=$templateFolder?>/images/profile.svg" alt="" />

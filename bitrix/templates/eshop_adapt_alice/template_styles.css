@@ -84,6 +84,17 @@ img {
 	color: #b8b8b8;
 }
 
+@media (min-width: 250px) and (max-width: 359px) {
+	.bx-logo .bx-logo-block {
+		margin-right:29%;
+	}
+}
+@media (min-width: 360px) and (max-width: 765px) {
+	.bx-logo .bx-logo-block {
+		margin-right:48%;
+	}
+}
+
 @media (max-width: 767px) {
 	.bx-logo {
 		background: #1484ce;
@@ -95,9 +106,7 @@ img {
 		padding-left: 40px;
 	}
 	.bx-logo .bx-logo-block {
-		text-align: center;
 		height: 30px;
-		float:left;
 	}
 	.bx-logo-text {
 		font-size: 24px;
@@ -680,16 +689,27 @@ a.bxd-block:hover {}
 	/*background-image: url("images/bg.jpg");*/
 	background-attachment: fixed;
 }
+@media (min-width: 1200px) and (max-width: 1450px){
+	.al-ph{
+		margin-left: 10px;
+	}
+}
 @media (min-width: 992px) and (max-width:1199px){
 	.bx-wrapper{
 		-webkit-background-size:1600px auto;
 		background-size:1600px auto;
+	}
+	.al-ph{
+		margin-left: -20px;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px){
 	.bx-wrapper{
 		-webkit-background-size:1280px auto;
 		background-size:1280px auto;
+	}
+	.al-ph{
+		margin-left: 75px;
 	}
 }
 @media (max-width: 767px){
@@ -706,6 +726,9 @@ a.bxd-block:hover {}
 @media(min-width:1903px) {
 .container {
     width: 1803px;
+}
+.al-ph{
+	margin-left: 70px;
 }
 }
 @media(min-width:2303px) {
