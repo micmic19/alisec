@@ -451,7 +451,7 @@ body>.bx-aside-nav-control{
 @media (min-width: 992px) and (max-width: 1199px) {
 	.bx-top-nav-container .bx-nav-1-lvl>a {font-size: 13px;}
 	.bx-top-nav-container .bx-nav-1-lvl>a span {
-		padding: 5px 11px 8px;
+		padding: 3px 9px 4px;
 		min-width: 286px;
 	}
 	.bx-top-nav-container.dropdown_collapsed{

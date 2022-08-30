@@ -16,7 +16,7 @@ $res = CIBlockElement::GetList(Array("sort"=>"asc"), $arFilter, false, false, ar
 ?>
 <div class="hidden-lg hidden-md">
 	<div class="opt-enter">
-		<a href="http://www.alice.ru/opt/contacts.aspx" target="_blank">ВХОД ДЛЯ ОПТОВЫХ ПОКУПАТЕЛЕЙ</a>
+		<a href="http://www.alice.ru/opt/contacts.aspx" target="_blank">ДЛЯ ОПТОВЫХ ПОКУПАТЕЛЕЙ</a>
 	</div>
 	</br>
 </div>
