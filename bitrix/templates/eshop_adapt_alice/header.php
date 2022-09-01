@@ -42,25 +42,25 @@ $curPage = $APPLICATION->GetCurPage(true);
 				<div class="col-sm-1 hidden-xs"><?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/vk_header.php"), false);?></div>							
 				<div class="col-md-9 col-sm-7 hidden-xs">
 					<?$APPLICATION->IncludeComponent(
-						"bitrix:menu", 
-						"top_menu", 
-						array(
-							"ROOT_MENU_TYPE" => "top",
-							"MAX_LEVEL" => "1",
-							"MENU_CACHE_TYPE" => "A",
-							"CACHE_SELECTED_ITEMS" => "N",
-							"MENU_CACHE_TIME" => "36000000",
-							"MENU_CACHE_USE_GROUPS" => "Y",
-							"MENU_CACHE_GET_VARS" => array(
-							),
-							"COMPONENT_TEMPLATE" => "top_menu",
-							"CHILD_MENU_TYPE" => "top",
-							"USE_EXT" => "N",
-							"DELAY" => "N",
-							"ALLOW_MULTI_SELECT" => "N"
-						),
-						false
-					);?>
+	"bitrix:menu", 
+	"top_menu_multilevel", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_TYPE" => "N",
+		"CACHE_SELECTED_ITEMS" => "N",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "top_menu_multilevel",
+		"CHILD_MENU_TYPE" => "bottom",
+		"USE_EXT" => "N",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
 				</div>
 				<div class="col-md-2 col-sm-4 hidden-xs"><?$APPLICATION->IncludeComponent("bitrix:main.include", "", array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/telephone_header.php"), false);?></div>				
 			</div>
