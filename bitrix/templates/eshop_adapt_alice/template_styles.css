@@ -133,12 +133,14 @@ img {
 	border-right: 1px solid #eaebec;
 	padding: 28px 45px 10px;
 	/*background: #fff;*/
-	background: transparent;
+	background-color: #f8f8f8;
+	/*background: transparent;*/
 }
 
 .bx-content-seection {
 	padding: 0 45px 5px;
 	background: transparent;
+	background-color: #f8f8f8;
 	border-left: 1px solid #eaebec;
 	border-right: 1px solid #eaebec;
 }

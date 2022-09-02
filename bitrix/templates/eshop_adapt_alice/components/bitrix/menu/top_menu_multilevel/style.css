@@ -4,12 +4,59 @@
 	margin:0; padding:0;
 	background:rgba(0, 77, 46, 0.59);
 	min-height:27px;
-	width:100%;
+	/*width:100%;*/
 	list-style:none;
-	font-size:11px;
+	font-size:13px;
 	float:left;
-    border-radius: 5px;
+    border-radius: 5px;	
 }
+
+
+@media (min-width: 1903px) {
+	#horizontal-multilevel-menu li a.root-item{
+		min-width: 167px;
+	}
+	#horizontal-multilevel-menu li a.root-item-selected{
+		min-width: 167px;
+	}
+}
+
+@media (min-width: 1451px) and (max-width: 1902px) {
+	#horizontal-multilevel-menu li a.root-item{
+		min-width: 114px;
+	}
+	#horizontal-multilevel-menu li a.root-item-selected{
+		min-width: 114px;		
+	}
+}
+/*
+@media (min-width: 1200px) and (max-width: 1450px){
+	#horizontal-multilevel-menu li a.root-item{
+		min-width: 114px;
+	}
+	#horizontal-multilevel-menu li a.root-item-selected{
+		min-width: 114px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	#horizontal-multilevel-menu li a.root-item{
+		min-width: 84px;
+	}
+	#horizontal-multilevel-menu li a.root-item-selected{
+		min-width: 84px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#horizontal-multilevel-menu li a.root-item{
+	
+	}
+	#horizontal-multilevel-menu li a.root-item-selected{
+		
+	}
+}
+*/
 
 #horizontal-multilevel-menu
 {
@@ -42,7 +89,8 @@
 /*Root menu selected*/
 #horizontal-multilevel-menu li a.root-item-selected
 {
-	background:#fc8d3d;
+	/*background:#fc8d3d;*/
+	background:#44b1c9;
 	color:#fff;
 	font-weight:bold;
 	padding:7px 12px;
@@ -79,6 +127,7 @@
 #horizontal-multilevel-menu li.item-selected
 {
 	background:#D6D6D6;
+	background:#44b1c9;
 	color:#fff;
 }
 

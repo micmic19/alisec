@@ -1,0 +1,5 @@
+<?
+$sSectionName = "Раскрой";
+$arDirProperties = array(
+);
+?>

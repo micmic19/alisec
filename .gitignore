@@ -1,9 +1,17 @@
 *
 !.gitignore
+!.top.menu.php
+!.bottom.menu.php
 !/index.php
 !about/
 !about/contacts/
 !about/contacts/*
+!about/cut/
+!about/cut/*
+!about/overlock/
+!about/overlock/*
+!about/shops/
+!about/shops/*
 !include/
 !include/*
 !include/*/*
