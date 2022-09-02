@@ -1,12 +1,13 @@
 /**Top menu**/
 #horizontal-multilevel-menu,#horizontal-multilevel-menu ul
 {
-	margin:0; padding:0;
+	margin:-2px; 
+	padding:0;
 	background:rgba(0, 77, 46, 0.59);
 	min-height:27px;
 	/*width:100%;*/
 	list-style:none;
-	font-size:13px;
+	font-size:12px;
 	float:left;
     border-radius: 5px;	
 }
@@ -23,13 +24,13 @@
 
 @media (min-width: 1451px) and (max-width: 1902px) {
 	#horizontal-multilevel-menu li a.root-item{
-		min-width: 114px;
+		min-width: 115px;
 	}
 	#horizontal-multilevel-menu li a.root-item-selected{
-		min-width: 114px;		
+		min-width: 115px;		
 	}
 }
-/*
+
 @media (min-width: 1200px) and (max-width: 1450px){
 	#horizontal-multilevel-menu li a.root-item{
 		min-width: 114px;
@@ -41,13 +42,13 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
 	#horizontal-multilevel-menu li a.root-item{
-		min-width: 84px;
+		min-width: 80px;
 	}
 	#horizontal-multilevel-menu li a.root-item-selected{
-		min-width: 84px;
+		min-width: 80px;
 	}
 }
-
+/*
 @media (min-width: 768px) and (max-width: 991px) {
 	#horizontal-multilevel-menu li a.root-item{
 	
