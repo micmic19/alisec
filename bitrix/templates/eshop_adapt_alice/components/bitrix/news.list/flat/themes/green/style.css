@@ -6,7 +6,7 @@
 .bx-newslist .btn {
 	background-color: #33B111;
 	border-color: #33B111;
-	display: none;
+	display: none;/*Sabel poprosil*/
 }
 .bx-newslist .btn:active,
 .bx-newslist .btn:hover {
