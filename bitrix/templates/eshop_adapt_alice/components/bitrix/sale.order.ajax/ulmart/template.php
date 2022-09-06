@@ -139,9 +139,6 @@ else
 		<div id="bt-self-delivery" onclick="SelectTypeDelivery(this);" class="b-tab col-md-3 col-xs-12 selected">
 			<span>Заберу самостоятельно</span>
 		</div>
-		<div id="bt-ozon-delivery" class="b-tab col-md-3 col-xs-12" onclick="SelectTypeDelivery(this);">
-			<span>Доставка через Озон</span>
-		</div>
 	</div>
 	<div class="tab-content">
 		<div id="tab-delivery">
@@ -222,19 +219,6 @@ else
 					<?endforeach;?>												
 					</ul>				
 				</div>	
-			</div>
-		</div>
-		<div id="tab-ozon-delivery">
-			<h4>Внимание! После получения заказа оператор обязательно свяжется с Вами и сообщит точную стоимость и дату доставки.</h4>			
-			<div id="error-holder-ozon"></div>
-			<table id="ozon-del-content" class="sale_order_table props">		
-				<?PrintPropsForm($arResult["ORDER_PROP"]["USER_PROPS"], $arParams["TEMPLATE_LOCATION"],false, "b-go-make-order-self", "self-del-content", $arParams["SELF_DELIVERY_ORDER_PROPS_REQ"]);?>
-			</table>
-			<div>
-				<script>
-					var ozon_packages = <? echo json_encode($arResult["PACKAGES"]); ?>
-				</script>
-				<iframe id="OzonWidget" title="Ozon widget" style="width: 100%; height: 100%; min-width: 320px; min-height: 350px; border: none; overflow: hidden" src="<?="https://rocket.ozon.ru/lk/widget?token=FTK6IoClK8%2FO%2FV7xjiUhxA%3D%3D&hidepostamat=true&showdeliveryprice=false&showdeliverytime=false&fromplaceid=15066285956000&packages".json_encode($arResult["PACKAGES"])?>">Ѕраузер не поддерживает iframe</iframe>
 			</div>
 		</div>
 	</div>
