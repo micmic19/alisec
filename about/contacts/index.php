@@ -32,7 +32,7 @@ $res = CIBlockElement::GetList(Array("sort"=>"asc"), $arFilter, false, false, ar
 		<p><?=$arProps["LEGAL_ADDRESS"]["VALUE"]?></p>
 	</div>
 </div>
-<h3>Пункты выдачи заказов</h3>
+<h3>Магазины и пункты выдачи</h3>
 <?
 while($ob = $res->GetNextElement())
 {
