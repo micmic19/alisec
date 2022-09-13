@@ -13,14 +13,17 @@ $arrFilter = array(array(
 //#ALICE
 ?>
 
-<?$APPLICATION->IncludeComponent("bitrix:news.list", "slider", array(
-	"DISPLAY_DATE" => "Y",
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"slider", 
+	array(
+		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"AJAX_MODE" => "N",
 		"IBLOCK_TYPE" => "news",
-		"IBLOCK_ID" => "1",
+		"IBLOCK_ID" => "9",
 		"NEWS_COUNT" => "5",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_ORDER1" => "DESC",
@@ -78,7 +81,7 @@ $arrFilter = array(array(
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "Y"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 
