@@ -4,6 +4,7 @@
 !.bottom.menu.php
 !/index.php
 !about/
+!about/*
 !about/contacts/
 !about/contacts/*
 !about/cut/
