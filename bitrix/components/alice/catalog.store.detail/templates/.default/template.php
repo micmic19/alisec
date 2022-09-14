@@ -10,7 +10,10 @@
 			<div class="hidden-sm hidden-md hidden-lg"><?=$arResult["YANDEX_PLACE_MAP"]["~VALUE"]?></div>
 			<p><strong>Ближайшая станция: </strong><?=$arResult["METRO_STATION"]["VALUE"]?></p>			
 			<p><strong>Адрес: </strong><?=$arResult["ADDRESS"]["VALUE"]?></p>
-			<p><strong>Телефон: </strong><?=$arResult["PHONE"]["VALUE"]?></p>
+			<p><strong>Телефон: </strong><a href="tel:<?=$arResult["PHONE"]["VALUE"]?>"><?=$arResult["PHONE"]["VALUE"]?></a></p>
+			<?if($arResult["E_MAIL"]["VALUE"]){?>
+			<p><strong>email: </strong><a href="mailto:<?=$arResult["E_MAIL"]["VALUE"]?>"><?=$arResult["E_MAIL"]["VALUE"]?></a></p>
+			<?}?>
 			<p><strong>Часы работы: </strong><?=$arResult["WORK_HOURS"]["VALUE"]?></p>
 			<div style="clear:both;"></div>
 		</div>
