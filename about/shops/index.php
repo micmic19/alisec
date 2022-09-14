@@ -12,7 +12,7 @@ if($ob = $res->GetNextElement()){
 	$arProps = $ob->GetProperties();
 }
 $arFilter = Array("IBLOCK_ID"=>IntVal(6), "PROPERTY_SHOP_CITY"=>$arFields["ID"], "ACTIVE"=>"Y");
-$res = CIBlockElement::GetList(Array("sort"=>"asc"), $arFilter, false, false, array("ID","NAME","PROPERTY_METRO_STATION", "PROPERTY_ADDRESS", "PROPERTY_STORE_ID", "PROPERTY_PHONE","PROPERTY_WORK_HOURS","PROPERTY_YANDEX_PLACE_MAP_INTERACT","PROPERTY_YANDEX_PLACE_MAP","PROPERTY_MORE_PHOTO"));
+$res = CIBlockElement::GetList(Array("sort"=>"asc"), $arFilter, false, false, array("ID","NAME","PROPERTY_METRO_STATION", "PROPERTY_ADDRESS", "PROPERTY_STORE_ID", "PROPERTY_PHONE","PROPERTY_WORK_HOURS","PROPERTY_YANDEX_PLACE_MAP_INTERACT","PROPERTY_YANDEX_PLACE_MAP","PROPERTY_MORE_PHOTO","PROPERTY_E_MAIL"));
 ?>
 <?
 while($ob = $res->GetNextElement())
@@ -23,6 +23,9 @@ $arFields = $ob->GetFields();
 	<div class="col-xs-12 col-md-4">
 		<p><a href="/store/<?=$arFields["ID"]?>"><?=$arFields["NAME"]?></a></br>
 		<b class="hidden-xs">Телефон:</b><a href="tel:<?=$arFields["PROPERTY_PHONE_VALUE"]?>"><?=$arFields["PROPERTY_PHONE_VALUE"]?></a></br>
+		<?if($arFields["PROPERTY_E_MAIL_VALUE"]){?>
+		<b>email:</b><a href="mailto:<?=$arFields["PROPERTY_E_MAIL_VALUE"]?>"><?=$arFields["PROPERTY_E_MAIL_VALUE"]?></a></br>
+		<?}?>
 		<b>Ближайшая станция:</b><?=$arFields["PROPERTY_METRO_STATION_VALUE"]?></br>
 		<b>Адрес:</b><?=$arFields["PROPERTY_ADDRESS_VALUE"]?></br>
 		<b>Часы работы:</b><?=$arFields["PROPERTY_WORK_HOURS_VALUE"]?></br>
