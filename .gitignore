@@ -3,6 +3,8 @@
 !.top.menu.php
 !.bottom.menu.php
 !/index.php
+!slider/
+!slider/*
 !about/
 !about/*
 !about/contacts/
