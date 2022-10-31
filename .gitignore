@@ -21,6 +21,8 @@
 !images/
 !images/*
 !images/*/*
+!images/*/*/*
+!images/*/*/*/*
 !bitrix/
 !bitrix/php_interface/
 !bitrix/php_interface/*
