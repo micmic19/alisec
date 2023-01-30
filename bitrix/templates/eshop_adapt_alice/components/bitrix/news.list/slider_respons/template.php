@@ -28,9 +28,16 @@
 
                 <?foreach($arResult["ITEMS"] as $arItem):?>
 					<?if(is_array($arItem["PREVIEW_PICTURE"])):?>
+						<?
+							$strTitle = (
+							isset($arItem["PREVIEW_PICTURE"]["DESCRIPTION"]) && '' != isset($arItem["PREVIEW_PICTURE"]["DESCRIPTION"])
+							? $arItem["PREVIEW_PICTURE"]["DESCRIPTION"]
+							: $arItem['NAME']
+							);
+    	            	?>
                         <div class="item">
 							<div class="pad15">
-								<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+								<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" title="<? echo $strTitle; ?>">
 									<img class="block img-responsive" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">
 								</a>	
 							</div>

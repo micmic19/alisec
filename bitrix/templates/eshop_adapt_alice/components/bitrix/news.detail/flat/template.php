@@ -67,7 +67,7 @@ CUtil::InitJSCore(array('fx'));
 					width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
 					height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
 					alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-					title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
+					title="<?=$arResult["DETAIL_PICTURE"]["DESCRIPTION"]?>"
 					/>
 			</div>
 		<?endif;?>
