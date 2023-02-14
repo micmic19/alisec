@@ -52,7 +52,7 @@ $APPLICATION->SetTitle("Анонсы");
 			1 => "",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"DISPLAY_NAME" => "Y",
+		"DISPLAY_NAME" => "N",
 		"META_KEYWORDS" => "-",
 		"META_DESCRIPTION" => "-",
 		"BROWSER_TITLE" => "-",
