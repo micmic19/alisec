@@ -1,5 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Магазины");
+$APPLICATION->SetTitle("Магазины и пункты выдачи");
 //if ($_SESSION["UF_SHOP_CITY_NAME"] == "shop.alice.ru" && SITE_ID == "s1")
 //	$ShopCode = "shop77.alice.ru";
 //else
@@ -21,7 +21,7 @@ $arFields = $ob->GetFields();
 ?>
 <div class="row">
 	<div class="col-xs-12 col-md-4">
-		<p><a href="/store/<?=$arFields["ID"]?>"><?=$arFields["NAME"]?></a></br>
+		<p style="font-size: large;"><a href="/store/<?=$arFields["ID"]?>"><?=$arFields["NAME"]?></a></br>
 		<b class="hidden-xs">Телефон:</b><a href="tel:<?=$arFields["PROPERTY_PHONE_VALUE"]?>"><?=$arFields["PROPERTY_PHONE_VALUE"]?></a></br>
 		<?if($arFields["PROPERTY_E_MAIL_VALUE"]){?>
 		<b>email:</b><a href="mailto:<?=$arFields["PROPERTY_E_MAIL_VALUE"]?>"><?=$arFields["PROPERTY_E_MAIL_VALUE"]?></a></br>
@@ -41,26 +41,24 @@ $arFields = $ob->GetFields();
 ?>
 		<?=$str?>
 		</p>		
-		
 	</div>
-	
+	<div class="col-xs-12 col-md-8">	
+		<div class="row">	
 <?		foreach($arFields["PROPERTY_MORE_PHOTO_VALUE"] as $pict){
-			$arPict = CFile::GetFileArray($pict);
-?>
-		<div class="col-xs-6 col-md-2">
+			$arPict = CFile::GetFileArray($pict);?>
+		<div class="col-xs-6 col-md-3">
 			<a title="<?=$arPict["DESCRIPTION"]?>" href="<?=$arPict["SRC"]?>" target="_blank"><img style="padding:5px 0;" src="<?=$arPict["SRC"]?>" alt="<?=$arPict["DESCRIPTION"]?>"></a>
 		</div>		
-<?
-		}
-?>	
-
-</div>
-<div class="row">
-	<div class="col-xs-12">
-		<div class="hidden-xs"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_INTERACT_VALUE"]?></div>
-		<div class="hidden-sm hidden-md hidden-lg"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_VALUE"]?></div>
-		</br>
-	</div>
+<?		}?>	
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hidden-xs"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_INTERACT_VALUE"]?></div>
+				<div class="hidden-sm hidden-md hidden-lg"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_VALUE"]?></div>
+				</br>
+			</div>
+		</div>
+	</div>	
 </div>
 <?
 }	

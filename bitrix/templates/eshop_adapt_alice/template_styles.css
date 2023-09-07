@@ -246,7 +246,7 @@ img {
 /*sidebar*/
 
 .bx-sidebar-block {
-	margin-bottom: 40px;
+	margin-bottom: 0px;
 }
 /* Breadcrumb Custom*/
 
@@ -283,6 +283,10 @@ h6.bx-title {}
 
 h2.bx-title {
 	font-size: 25px;
+}
+h3.bx-title-center {
+	font-size: 35px;
+	text-align: center;
 }
 
 h3.bx-title {}
