@@ -22,7 +22,7 @@ $arFields = $ob->GetFields();
 
 <div class="row">
 	<div class="col-xs-12 col-md-4">
-		<p style="font-size: large;"><a href="/store/<?=$arFields["ID"]?>"><?=$arFields["NAME"]?></a></br>
+		<p><a href="/store/<?=$arFields["ID"]?>"><?=$arFields["NAME"]?></a></br>
 		<b class="hidden-xs">Телефон:</b><a href="tel:<?=$arFields["PROPERTY_PHONE_VALUE"]?>"><?=$arFields["PROPERTY_PHONE_VALUE"]?></a></br>
 		<?if($arFields["PROPERTY_E_MAIL_VALUE"]){?>
 		<b>email:</b><a href="mailto:<?=$arFields["PROPERTY_E_MAIL_VALUE"]?>"><?=$arFields["PROPERTY_E_MAIL_VALUE"]?></a></br>

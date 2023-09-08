@@ -32,12 +32,13 @@ $res = CIBlockElement::GetList(Array("sort"=>"asc"), $arFilter, false, false, ar
 		<p><?=$arProps["LEGAL_ADDRESS"]["VALUE"]?></p>
 	</div>
 </div>
-<h3>Магазины и пункты выдачи</h3>
+<h3 align="center">Магазины и пункты выдачи</h3>
 <?
 while($ob = $res->GetNextElement())
 {
 $arFields = $ob->GetFields();
 ?>
+
 <div class="row">
 	<div class="col-xs-12 col-md-4">
 		<p><a href="/store/<?=$arFields["ID"]?>"><?=$arFields["NAME"]?></a></br>
@@ -60,26 +61,24 @@ $arFields = $ob->GetFields();
 ?>
 		<?=$str?>
 		</p>		
-		
 	</div>
-	
+	<div class="col-xs-12 col-md-8">	
+		<div class="row">	
 <?		foreach($arFields["PROPERTY_MORE_PHOTO_VALUE"] as $pict){
-			$arPict = CFile::GetFileArray($pict);
-?>
-		<div class="col-xs-6 col-md-2">
+			$arPict = CFile::GetFileArray($pict);?>
+		<div class="col-xs-6 col-md-3">
 			<a class="popimg" title="<?=$arPict["DESCRIPTION"]?>" href="<?=$arPict["SRC"]?>" target="_blank"><img style="padding:5px 0;" src="<?=$arPict["SRC"]?>" alt="<?=$arPict["DESCRIPTION"]?>"></a>
 		</div>		
-<?
-		}
-?>	
-
-</div>
-<div class="row">
-	<div class="col-xs-12">
-		<div class="hidden-xs"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_INTERACT_VALUE"]?></div>
-		<div class="hidden-sm hidden-md hidden-lg"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_VALUE"]?></div>
-		</br>
-	</div>
+<?		}?>	
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hidden-xs"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_INTERACT_VALUE"]?></div>
+				<div class="hidden-sm hidden-md hidden-lg"><?=$arFields["~PROPERTY_YANDEX_PLACE_MAP_VALUE"]?></div>
+				</br>
+			</div>
+		</div>
+	</div>	
 </div>
 <?
 }	
@@ -99,4 +98,5 @@ $(document).ready(function() {
    });
    });
 </script>
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php")?>
