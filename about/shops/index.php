@@ -47,7 +47,7 @@ $arFields = $ob->GetFields();
 		<div class="row">	
 <?		foreach($arFields["PROPERTY_MORE_PHOTO_VALUE"] as $pict){
 			$arPict = CFile::GetFileArray($pict);?>
-		<div class="col-xs-6 col-md-3">
+		<div class="col-xs-6 col-md-3  hidden-xs">
 			<a class="popimg" title="<?=$arPict["DESCRIPTION"]?>" href="<?=$arPict["SRC"]?>" target="_blank"><img style="padding:5px 0;" src="<?=$arPict["SRC"]?>" alt="<?=$arPict["DESCRIPTION"]?>"></a>
 		</div>		
 <?		}?>	
