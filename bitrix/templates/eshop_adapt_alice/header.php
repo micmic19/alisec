@@ -8,8 +8,8 @@ CJSCore::Init(array("fx"));
 //CJSCore::Init('jquery');//#ALICE
 CJSCore::Init(array('jquery2'));//#ALICE mic 18/10/2021 yyy
 
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fancybox/jquery.fancybox.css'); //mic 08/09/23
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/fancybox/jquery.fancybox.js'); //mic 08/09/23
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fancybox/jquery.fancybox.min.css'); //mic 08/09/23
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/fancybox/jquery.fancybox.min.js'); //mic 08/09/23
 
 $curPage = $APPLICATION->GetCurPage(true);
 ?>
