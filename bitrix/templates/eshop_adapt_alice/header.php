@@ -187,7 +187,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 				<div class="row">
 					<h3 class="<?=($curPage=="/about/shops/index.php" ? "bx-title-center" : "")?> bx-title dbg_title"><?=$APPLICATION->ShowTitle(false);?></h3>
 					<?if (preg_match('/catalog\/[a-z0-9_\-]+\/index\.php/', $curPage)):?>
-						<div class="col-md-3">Можно купить как в интернет магазине, так и со склада и вмагазинах сети "Элис" в Санкт-Петербурге</div>
+						<div class="col-md-3">Можно купить как в интернет магазине, так и со склада и в магазинах сети "Элис" в Санкт-Петербурге</div>
 					<?endif?>
 				</div>
 			<?endif?>
