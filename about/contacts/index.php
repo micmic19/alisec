@@ -67,7 +67,7 @@ $arFields = $ob->GetFields();
 			$arPict = CFile::GetFileArray($pict);
 ?>
 		<div class="col-xs-6 col-md-2">
-			<a title="<?=$arPict["DESCRIPTION"]?>" href="<?=$arPict["SRC"]?>" target="_blank"><img style="padding:5px 0;" src="<?=$arPict["SRC"]?>" alt="<?=$arPict["DESCRIPTION"]?>"></a>
+			<a class="popimg" title="<?=$arPict["DESCRIPTION"]?>" href="<?=$arPict["SRC"]?>" target="_blank"><img style="padding:5px 0;" src="<?=$arPict["SRC"]?>" alt="<?=$arPict["DESCRIPTION"]?>"></a>
 		</div>		
 <?
 		}
@@ -85,4 +85,18 @@ $arFields = $ob->GetFields();
 }	
 
 ?>
+
+<script>
+$(document).ready(function() {
+	$(".popimg").fancybox({
+	  openEffect	: 'elastic',
+	  closeEffect	: 'elastic',
+	  helpers : {
+	  title : {
+	  type : 'inside'
+		   }
+		}
+   });
+   });
+</script>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php")?>

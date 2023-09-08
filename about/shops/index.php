@@ -19,6 +19,7 @@ while($ob = $res->GetNextElement())
 {
 $arFields = $ob->GetFields();
 ?>
+
 <div class="row">
 	<div class="col-xs-12 col-md-4">
 		<p style="font-size: large;"><a href="/store/<?=$arFields["ID"]?>"><?=$arFields["NAME"]?></a></br>
@@ -47,7 +48,7 @@ $arFields = $ob->GetFields();
 <?		foreach($arFields["PROPERTY_MORE_PHOTO_VALUE"] as $pict){
 			$arPict = CFile::GetFileArray($pict);?>
 		<div class="col-xs-6 col-md-3">
-			<a title="<?=$arPict["DESCRIPTION"]?>" href="<?=$arPict["SRC"]?>" target="_blank"><img style="padding:5px 0;" src="<?=$arPict["SRC"]?>" alt="<?=$arPict["DESCRIPTION"]?>"></a>
+			<a class="popimg" title="<?=$arPict["DESCRIPTION"]?>" href="<?=$arPict["SRC"]?>" target="_blank"><img style="padding:5px 0;" src="<?=$arPict["SRC"]?>" alt="<?=$arPict["DESCRIPTION"]?>"></a>
 		</div>		
 <?		}?>	
 		</div>
@@ -64,4 +65,19 @@ $arFields = $ob->GetFields();
 }	
 
 ?>
+
+<script>
+$(document).ready(function() {
+	$(".popimg").fancybox({
+	  openEffect	: 'elastic',
+	  closeEffect	: 'elastic',
+	  helpers : {
+	  title : {
+	  type : 'inside'
+		   }
+		}
+   });
+   });
+</script>
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php")?>
