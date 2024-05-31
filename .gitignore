@@ -40,7 +40,7 @@
 !bitrix/php_interface/*/*/*/*/*/*/*/*/*/*/*/*/*
 bitrix/php_interface/dbconn.php
 bitrix/php_interface/dbconn.php.*
-bitrix/php_interface/include/catalog_export/logs/*
+bitrix/php_interface/include/catalog_export/logs/*.*
 !bitrix/templates/
 !bitrix/templates/b2b_alice/
 !bitrix/templates/b2b_alice/*

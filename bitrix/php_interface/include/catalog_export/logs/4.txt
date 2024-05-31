@@ -1,6 +1,0 @@
-Array
-(
-    [Result] => 
-    [HasErrors] => false
-    [ErrorText] => 
-)

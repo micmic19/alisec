@@ -679,7 +679,7 @@ function OnBeforeIBlockElementUpdateHandler(&$arFields)
                  {    
                        unset($arFields['PREVIEW_PICTURE']);
                  } else
-					 AddMessage2Log("PREVIEW_PICTURE change".$arFields['ID'], "sale");
+					 //AddMessage2Log("PREVIEW_PICTURE change".$arFields['ID'], "sale");
               }
            }
 
@@ -695,7 +695,7 @@ function OnBeforeIBlockElementUpdateHandler(&$arFields)
                  {					
                        unset($arFields['DETAIL_PICTURE']);
                  } else
-					 AddMessage2Log("DETAIL_PICTURE change".$arFields['ID'], "sale");
+					 //AddMessage2Log("DETAIL_PICTURE change".$arFields['ID'], "sale");
               }
            }
       }
