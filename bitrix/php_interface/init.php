@@ -678,8 +678,8 @@ function OnBeforeIBlockElementUpdateHandler(&$arFields)
                  if($new_file_name==$arFile['ORIGINAL_NAME'])
                  {    
                        unset($arFields['PREVIEW_PICTURE']);
-                 } //else
-					 //AddMessage2Log("PREVIEW_PICTURE change".$arFields['ID'], "sale");
+                 } else
+					 AddMessage2Log("PREVIEW_PICTURE change".$arFields['ID'], "sale");
               }
            }
 
@@ -694,8 +694,8 @@ function OnBeforeIBlockElementUpdateHandler(&$arFields)
                  if($new_file_name==$arFile['ORIGINAL_NAME'])
                  {					
                        unset($arFields['DETAIL_PICTURE']);
-                 } //else
-					 //AddMessage2Log("DETAIL_PICTURE change".$arFields['ID'], "sale");
+                 } else
+					 AddMessage2Log("DETAIL_PICTURE change".$arFields['ID'], "sale");
               }
            }
       }

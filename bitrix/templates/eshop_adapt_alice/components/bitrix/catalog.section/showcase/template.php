@@ -116,7 +116,7 @@ if (!empty($arResult['ITEMS']))
 </div>
 <div class="bx_catalog_list_home col<? echo $arParams['LINE_ELEMENT_COUNT']; ?> <? echo $templateData['TEMPLATE_CLASS']; ?>">
 	<?
-AddMessage2Log(print_r($arResult['ITEMS'],true), "sale");
+//AddMessage2Log(print_r($arResult['ITEMS'],true), "sale");
 foreach ($arResult['ITEMS'] as $key => $arItem)
 {
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strElementEdit);
