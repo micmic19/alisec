@@ -49,7 +49,7 @@ while($ob = $res->GetNextElement()){
 		if (in_array($store['ID'] , $stores)){
 			$arItem["REAL_AMOUNT"] += $store['REAL_AMOUNT'];
 		}
-		$OnlyOrder = ($store['REAL_AMOUNT'] > 0) && ($store['REAL_AMOUNT'] = 23);
+		$OnlyOrder = ($store['REAL_AMOUNT'] > 0) && ($store['ID'] = 23);
 	}
 	foreach ($arResult["JS"]["SKU"] as $sku_key =>$sku_values){
 		foreach ($sku_values as $store_key =>$store_amount){
