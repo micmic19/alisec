@@ -40,6 +40,9 @@ $this->setFrameMode(true);
 	<?if(!empty($arResult["STORES"]) && $arParams["MAIN_TITLE"] != ''):?>
 		<h4><?=$arParams["MAIN_TITLE"]?></h4>
 	<?endif;?>
+	<?if($arResult["ONLYORDER"]):?>
+		<h5>По запросу</h5>
+	<?endif;?>
 	<?if(!empty($arResult["STORES"])):?>
 	<ul id="c_store_amount">
 		<?foreach($arResult["STORES"] as $pid => $arProperty):?>

@@ -38,6 +38,7 @@ $arStores = array();
 $jsSKU = array();
 $jsSKUMeasures = array();
 $jsStores = array();
+$OnlyOrder = false;
 
 $res = CIBlockElement::GetList(array(), $arFilter, false, false,array("ID", "NAME", "PROPERTY_STORE_ID", "PROPERTY_ADDRESS", "PROPERTY_PHONE","PROPERTY_WORK_HOURS", "PROPERTY_PAYMENT_METHOD_CASH", "PROPERTY_PAYMENT_METHOD_CARD"));
 while($ob = $res->GetNextElement()){
@@ -48,6 +49,7 @@ while($ob = $res->GetNextElement()){
 		if (in_array($store['ID'] , $stores)){
 			$arItem["REAL_AMOUNT"] += $store['REAL_AMOUNT'];
 		}
+		$OnlyOrder = ($store['REAL_AMOUNT'] > 0) && ($store['REAL_AMOUNT'] = 23);
 	}
 	foreach ($arResult["JS"]["SKU"] as $sku_key =>$sku_values){
 		foreach ($sku_values as $store_key =>$store_amount){
@@ -82,6 +84,7 @@ while($ob = $res->GetNextElement()){
 
 }
 
+$arResult["ONLYORDER"] = $OnlyOrder;
 $arResult["STORES"] = $arStores;
 $arResult["JS"]["SKU"] = $jsSKU;
 $arResult["JS"]["MEASURES"] = $jsSKUMeasures;
