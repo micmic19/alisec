@@ -1,0 +1,4 @@
+<?
+	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+	$APPLICATION->SetTitle("Наши вакансии");
+?><h3><i>На данный момент открытых&nbsp;&nbsp;вакансий нет</i></h3><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
