@@ -13,9 +13,26 @@ if(!defined('LOG_FILENAME')) {
 
 function testAgent()
 {
-		//AddMessage2Log("testAgent()", "main");
-        mail('rur@alice.ru', 'Агент тест', 'Агент тест');
-        return "testAgent();";
+    $start_time = getdate()[0];
+    //sleep(10);
+    $finish_time = getdate()[0]; 
+    mail('rur@alice.ru', 'OnSuccessCatalogImport1CHandler1', ($finish_time - $start_time));
+	return "testAgent();";
+}
+
+function find_all_files($dir)
+{
+    $root = scandir($dir);
+    foreach($root as $value)
+    {
+        if($value === '.' || $value === '..') {continue;}
+        if(is_file("$dir/$value")) {$result[]="$dir/$value";continue;}
+        foreach(find_all_files("$dir/$value") as $value)
+        {
+            $result[]=$value;
+        }
+    }
+    return $result;
 }
 
 function CheckRecaptchaGlobal() {
@@ -135,6 +152,7 @@ function OnBeforeCatalogImport1CHandler(){
 }
 
 function OnSuccessCatalogImport1CHandler(){
+	ini_set('max_execution_time', '600'); //600 seconds = 10 minutes	
 	/*
 	1. delete old measure ratio
 	2. add measure and measure ratio into catalog from SKU infoblock and Catalog infoblock (without sku) properties(CATALOG_MEASURE_RATIO, CML2_BASE_UNIT)
@@ -225,7 +243,7 @@ function OnSuccessCatalogImport1CHandler(){
 			CIBlockElement::SetPropertyValuesEx($arCatalogFields["ID"], $CATALOG_IBLOCK_ID, Array("MINIMUM_PRICE"=>$min_price));
 	}
    $finish_time = getdate()[0];
-   mail('rur@alice.ru', 'OnSuccessCatalogImport1CHandler', ($finish_time - $start_time));
+   mail('rur@alice.ru', 'OnSuccessCatalogImport1CHandler2', ($finish_time - $start_time));
    echo($finish_time - $start_time);
    return "OnSuccessCatalogImport1CHandler();"; 
 }
