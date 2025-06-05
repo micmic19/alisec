@@ -56,7 +56,7 @@ ul
 <div class=WordSection1>
 
 <p class=MsoNormal align=center style='margin-top:10.0pt;margin-right:0cm;
-margin-bottom:10.0pt;margin-left:0cm;text-align:center'>ИП Малкина Ольга Анатольевны</p>
+margin-bottom:10.0pt;margin-left:0cm;text-align:center'>ИП Малкина Ольга Анатольевна</p>
 <p> 11.11.2024 </p>
 <p class=MsoTitle align=center style='margin-top:10.0pt;margin-right:0cm;
 margin-bottom:10.0pt;margin-left:0cm;text-align:center'><a name="_rjo0satc2zpw"></a><span
