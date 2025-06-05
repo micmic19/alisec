@@ -37,6 +37,9 @@ $curPage = $APPLICATION->GetCurPage(true);
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/colors.css");
 	$APPLICATION->SetAdditionalCSS("/bitrix/css/main/bootstrap.css");
 	$APPLICATION->SetAdditionalCSS("/bitrix/css/main/font-awesome.css");
+	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/pd.css"); //mic 05/06/25
+	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/pd.js"); //mic 05/06/25
+
 	?>
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
@@ -194,8 +197,16 @@ $curPage = $APPLICATION->GetCurPage(true);
 			</div>
 		</div>
 	</header>
-	<div class="workarea">
-		<div class="container bx-content-seection">
+
+<div class="cookie-notice">
+  <p>Этот сайт использует файлы cookie для улучшения вашего пользовательского опыта.
+     Используя этот сайт, вы соглашаетесь на их использование.
+     <a href="/cookie-policy" target="_blank">Подробнее</a>.</p>
+  <button class="cookie-notice-close">Закрыть</button>
+</div>
+
+<div class="workarea">
+	<div class="container bx-content-seection">
 			<div class="row">
 			<?$isCatalogPage = preg_match("~^".SITE_DIR."catalog/~", $curPage);$isCatalogPage=true//#ALICE?>
 				<div class="bx-content <?=($isCatalogPage ? "col-xs-12" : "col-md-9 col-sm-8")?>">
