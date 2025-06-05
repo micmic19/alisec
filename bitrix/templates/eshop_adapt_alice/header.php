@@ -201,7 +201,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 <div class="cookie-notice">
   <p>Этот сайт использует файлы cookie для улучшения вашего пользовательского опыта.
      Используя этот сайт, вы соглашаетесь на их использование.
-     <a href="/cookie-policy" target="_blank">Подробнее</a>.</p>
+     <a href="/about/policy.php" target="_blank">Подробнее</a>.</p>
   <button class="cookie-notice-close">Закрыть</button>
 </div>
 
