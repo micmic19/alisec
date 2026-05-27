@@ -1085,6 +1085,7 @@ if (empty($arRunErrors))
 				{
 					$strSections .= "<categoryId>".$arSection["ID"]."</categoryId>\n";
 					$boolNoActiveSections = false;
+					break; // #ALICE 2026_05_13
 				}
 			}
 			if (!$boolCurrentSections)
@@ -1597,7 +1598,10 @@ if (empty($arRunErrors))
 					if(CModule::IncludeModule("iblock")){
 						$pres = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
 						if($ar_pres = $pres->GetNext()){
-						$ppres = CIBlockSection::GetByID($ar_pres["IBLOCK_SECTION_ID"]);
+						//#ALICE 2026_05_13
+						$ppres = CIBlockSection::GetList(array(), array("IBLOCK_ID"=>$IBLOCK_ID, "ID"=>$ar_pres["IBLOCK_SECTION_ID"]), false, array("ID","NAME","UF_*"));
+						//$ppres = CIBlockSection::GetByID($ar_pres["IBLOCK_SECTION_ID"]);
+						//#ALICE 2026_05_13
 						if($ar_ppres = $ppres->GetNext())
 							$strOfferYandex .= "<typePrefix>".yandex_text2xml((empty($ar_user_fields["UF_GROUP_NAME"]))?$ar_ppres['NAME']:$ar_user_fields["UF_GROUP_NAME"])."</typePrefix>\n";
 						}
