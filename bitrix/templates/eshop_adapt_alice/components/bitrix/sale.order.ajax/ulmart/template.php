@@ -136,6 +136,10 @@ else
 		<div id="bt-delivery" class="b-tab col-md-3 col-xs-12" onclick="SelectTypeDelivery(this);">
 			<span>Доставка по СПб и ЛО</span>
 		</div>
+		<div id="bt-yandex-delivery"
+			 class="b-tab col-md-3 col-xs-12" onclick="SelectTypeDelivery(this);">
+			<span>Яндекс ПВЗ</span>
+		</div>
 		<div id="bt-self-delivery" onclick="SelectTypeDelivery(this);" class="b-tab col-md-3 col-xs-12 selected">
 			<span>Заберу самостоятельно</span>
 		</div>
@@ -221,6 +225,13 @@ else
 				</div>	
 			</div>
 		</div>
+		<div id="tab-yandex-delivery">
+			<h4>Пункты выдачи Яндекс</h4>
+			<div id="yandex-props-container"></div>
+			<div><h3>Доставка не включена в стоимость товара. С вами свяжется наш оператор для уточнения деталей.</h3></div>
+			<div id="selected-yandex-pvz"></div>
+			<div id="yandex-widget-container"></div>
+		</div>		
 	</div>
 	<div id="holder-summary" class="delivery-content-step">
 		<?include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/summary.php");?>		
@@ -257,6 +268,25 @@ else
 				<input type="hidden" name="profile_change" id="profile_change" value="N">
 				<input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
 				<input type="hidden" name="PAY_SYSTEM_ID" value="<?=$arParams["PAY_SYSTEM_ID"]?>">
+				<input type="hidden" name="ORDER_PROP_26" id="YANDEX_PVZ_ID">
+				<input type="hidden" name="ORDER_PROP_27" id="YANDEX_PVZ_ADDRESS">
+				<script async
+					src="https://ndd-widget.landpro.site/widget.js">
+				</script>
+				<script type="text/html"
+						id="yandex-props-template">
+
+					<table id="yandex-del-content" class="sale_order_table props">
+						<?PrintPropsForm(
+							$arResult["ORDER_PROP"]["USER_PROPS"],
+							$arParams["TEMPLATE_LOCATION"],
+							false,
+							"b-go-make-order-yandex",
+							"yandex-del-content",
+							$arParams["SELF_DELIVERY_ORDER_PROPS_REQ"]
+						);?>
+					</table>
+				</script>				
 			</form>
 			<?if($arParams["DELIVERY_NO_AJAX"] == "N"):?>
 				<script language="JavaScript" src="/bitrix/js/main/cphttprequest.js"></script>

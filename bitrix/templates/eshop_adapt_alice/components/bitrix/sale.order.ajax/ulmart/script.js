@@ -11,6 +11,7 @@ function CheckFieldsFill(button,step){
 
 function SelectTypeDelivery(val){
 	$("#order_form_content .selected").removeClass("selected");
+	unmountYandexProps();
 	switch (val.id) {
 	case 'bt-delivery':
 		$("#tab-delivery").addClass("selected");
@@ -27,6 +28,14 @@ function SelectTypeDelivery(val){
 		$("#tab-ozon-delivery").addClass("selected");
 		$("#popupOrder").remove();
 	    break;
+	case 'bt-yandex-delivery':
+		$("#tab-yandex-delivery").addClass("selected");
+		$("#popupOrder").remove();
+		mountYandexProps();
+		setTimeout(function () {
+			openYandexWidget();
+		}, 100);
+		break;	
 	}	
 	$(val).addClass("selected");	
 }
@@ -191,6 +200,77 @@ function submitOzon(ozon_id){
 	);
 }
 
+function submitYandex()
+{
+    var pvzId =
+        $("#YANDEX_PVZ_ID").val();
+
+    var pvzAddress =
+        $("#YANDEX_PVZ_ADDRESS").val();
+
+    if (!pvzId)
+    {
+        alert('Выберите пункт выдачи');
+
+        return false;
+    }
+
+    var orderForm = $('#ORDER_FORM');
+
+    $("#error-holder *").remove();
+
+    var url = orderForm.attr('action');
+
+    var pserialize =
+        orderForm.serialize()
+        + "&confirmorder=Y";
+
+    $.post(
+        url,
+        pserialize,
+        function(data)
+        {
+            $('#error-holder')
+                .append(data);
+        }
+    );
+}
+
+function openYandexWidget()
+{
+    if (!window.YaDelivery)
+    {
+        alert('Виджет Яндекс загружается');
+
+        return;
+    }
+
+    $("#yandex-widget-container").html("");
+
+    YaDelivery.createWidget({
+
+        containerId: 'yandex-widget-container',
+
+        params: {
+
+            city: 'Санкт-Петербург',
+
+            show_select_button: true,
+
+            filter: {
+                type: [
+                    'pickup_point',
+                    'terminal'
+                ]
+            },
+
+            size: {
+                height: '600px',
+                width: '100%'
+            }
+        }
+    });
+}
 
 $( window ).on( "message", receiveMessage);
 function receiveMessage(event)
@@ -240,4 +320,84 @@ function delivery_price(value, price)
 	else 
 		price_=price;
 	return Math.ceil(price_*1.5/10)*10;
+}
+
+document.addEventListener(
+    'YaNddWidgetPointSelected',
+    function (event)
+    {
+        var point = event.detail;
+
+        $("#YANDEX_PVZ_ID").val(point.id);
+
+        $("#YANDEX_PVZ_ADDRESS")
+            .val(point.address.full_address);
+
+        $("#selected-yandex-pvz").html(
+            '<div class="alert alert-success">' +
+            point.address.full_address +
+            '</div>'
+        );
+
+        sessionStorage.setItem(
+            'YANDEX_PVZ_ID',
+            point.id
+        );
+
+        sessionStorage.setItem(
+            'YANDEX_PVZ_ADDRESS',
+            point.address.full_address
+        );
+
+        submitYandex();
+    }
+);
+
+function restoreYandexPvz()
+{
+    var id =
+        sessionStorage.getItem('YANDEX_PVZ_ID');
+
+    var address =
+        sessionStorage.getItem(
+            'YANDEX_PVZ_ADDRESS'
+        );
+
+    if (id)
+    {
+        $("#YANDEX_PVZ_ID").val(id);
+    }
+
+    if (address)
+    {
+        $("#YANDEX_PVZ_ADDRESS")
+            .val(address);
+
+        $("#selected-yandex-pvz").html(
+            '<div class="alert alert-success">' +
+            address +
+            '</div>'
+        );
+    }
+}
+
+$(document).ready(function () {
+
+    restoreYandexPvz();
+
+});
+
+function mountYandexProps()
+{
+    if ($("#yandex-del-content").length)
+        return;
+
+    $("#yandex-props-container").html(
+        $("#yandex-props-template").html()
+    );
+}
+
+function unmountYandexProps()
+{
+    $("#yandex-props-container").html("");
 }
